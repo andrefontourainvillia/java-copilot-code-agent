@@ -65,7 +65,3 @@ mongod --version
 # Run sample MongoDB commands
 echo "Current databases:"
 mongosh --eval "db.getMongo().getDBNames()"
-
-cd /workspaces/java-copilot-code-agent/
-mvn clean compile
-mvn test

@@ -11,9 +11,11 @@ public class StaticController {
     
     /**
      * Serve the main index page.
+     * Returning "forward:/index.html" em vez de "redirect:/index.html"
+     * para evitar problemas de CORS com redirecionamentos entre domínios
      */
     @GetMapping("/")
     public String index() {
-        return "redirect:/index.html";
+        return "forward:/index.html";
     }
 }
