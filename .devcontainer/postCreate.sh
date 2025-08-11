@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Install additional packages after the container is created
+sudo apt-get update -y
+sudo apt install -y sl libgpm2 libncurses6
+
 # Install MongoDB
 sudo apt-get install gnupg curl
 curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
