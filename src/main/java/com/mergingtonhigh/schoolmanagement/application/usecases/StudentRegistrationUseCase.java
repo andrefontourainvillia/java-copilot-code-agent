@@ -1,7 +1,6 @@
 package com.mergingtonhigh.schoolmanagement.application.usecases;
 
 import com.mergingtonhigh.schoolmanagement.domain.entities.Activity;
-import com.mergingtonhigh.schoolmanagement.domain.entities.Teacher;
 import com.mergingtonhigh.schoolmanagement.domain.repositories.ActivityRepository;
 import com.mergingtonhigh.schoolmanagement.domain.repositories.TeacherRepository;
 import com.mergingtonhigh.schoolmanagement.domain.valueobjects.Email;
@@ -26,7 +25,7 @@ public class StudentRegistrationUseCase {
      */
     public String signupForActivity(String activityName, String email, String teacherUsername) {
         // Validate teacher authentication
-        Teacher teacher = teacherRepository.findByUsername(teacherUsername)
+        teacherRepository.findByUsername(teacherUsername)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid teacher credentials"));
         
         // Get the activity
@@ -48,7 +47,7 @@ public class StudentRegistrationUseCase {
      */
     public String unregisterFromActivity(String activityName, String email, String teacherUsername) {
         // Validate teacher authentication
-        Teacher teacher = teacherRepository.findByUsername(teacherUsername)
+        teacherRepository.findByUsername(teacherUsername)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid teacher credentials"));
         
         // Get the activity

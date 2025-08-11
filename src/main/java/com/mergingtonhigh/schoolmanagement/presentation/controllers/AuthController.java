@@ -1,6 +1,5 @@
 package com.mergingtonhigh.schoolmanagement.presentation.controllers;
 
-import com.mergingtonhigh.schoolmanagement.application.dtos.LoginRequestDTO;
 import com.mergingtonhigh.schoolmanagement.application.dtos.TeacherDTO;
 import com.mergingtonhigh.schoolmanagement.application.usecases.AuthenticationUseCase;
 import org.springframework.http.ResponseEntity;

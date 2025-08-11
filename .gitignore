@@ -75,14 +75,6 @@ out/
 /nbdist/
 /.nb-gradle/
 
-# VS Code
-.vscode/
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-.history/
-
 # Spring Boot
 *.jar
 *.war
