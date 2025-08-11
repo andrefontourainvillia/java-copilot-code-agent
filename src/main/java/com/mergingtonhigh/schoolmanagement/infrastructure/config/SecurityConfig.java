@@ -39,10 +39,12 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.addAllowedOriginPattern("*");  // Permite qualquer origem com pattern
+        configuration.addAllowedOrigin("https://*.app.github.dev"); // Domínios do GitHub Codespaces
+        configuration.addAllowedOrigin("https://localhost:8080"); // Permite localhost
+        configuration.addAllowedOrigin("http://localhost:8080"); // Permite localhost
         configuration.setAllowedMethods(java.util.Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(java.util.Arrays.asList("*"));
-        configuration.setAllowCredentials(false);  // Alterado para false para permitir wildcard origins
+        configuration.setAllowCredentials(true);
         configuration.setExposedHeaders(java.util.Arrays.asList("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
         
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
