@@ -36,6 +36,8 @@ sudo apt install -y sl libgpm2 libncurses6
 
 sudo apt-get install -y libcurl4 libgssapi-krb5-2 libldap-common libwrap0 libsasl2-2 libsasl2-modules libsasl2-modules-gssapi-mit openssl liblzma5
 
+cd /workspaces/java-copilot-code-agent/.devcontainer
+
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-debian12-8.0.12.tgz
 tar -zxvf mongodb-linux-*-8.0.12.tgz
 
@@ -71,3 +73,8 @@ mongod --version
 ## Run sample MongoDB commands
 #echo "Current databases:"
 mongosh --eval "db.getMongo().getDBNames()"
+
+cd /workspaces/java-copilot-code-agent/
+mvn clean compile
+mvn test
+mvn spring-boot:run
