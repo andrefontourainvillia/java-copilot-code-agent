@@ -19,11 +19,15 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "GitHub.copilot",
+        "mongodb.mongodb-vscode",
         "redhat.java",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test",
         "vscjava.vscode-maven",
-        "vscjava.vscode-java-debug", 
+        "vscjava.vscode-java-dependency",
         "vmware.vscode-spring-boot",
-        "GitHub.copilot"
+        "vscjava.vscode-spring-boot-dashboard"
       ],
       "settings": {
         "java.configuration.detectJdksAtStart": false,
