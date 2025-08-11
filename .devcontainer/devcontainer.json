@@ -1,6 +1,6 @@
 {
   "name": "Java 21 Development",
-  "image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21",

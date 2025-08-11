@@ -3,5 +3,5 @@ sudo apt-get update -y
 sudo apt install -y sl libgpm2 libncurses6
 
 # Prepare MongoDB Dev DB
-chmod +x ./.devcontainer/installMongoDB.sh
-./.devcontainer/installMongoDB.sh
+chmod +x /workspaces/java-copilot-code-agent/.devcontainer/installMongoDB.sh
+/workspaces/java-copilot-code-agent/.devcontainer/installMongoDB.sh
