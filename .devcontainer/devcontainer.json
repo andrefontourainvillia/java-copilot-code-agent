@@ -1,27 +1,34 @@
 {
-  "name": "Java 21 Development Environment",
+  "name": "Java 21 Development",
   "image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installMaven": true,
+      "installGradle": false
+    }
+  },
   "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Spring Boot App",
+      "onAutoForward": "notify"
+    }
+  },
   "postCreateCommand": "bash ./.devcontainer/postCreate.sh",
   "customizations": {
     "vscode": {
       "extensions": [
-        "GitHub.copilot",
-        "vscjava.vscode-java-pack",
         "redhat.java",
         "vscjava.vscode-maven",
-        "vscjava.vscode-java-test",
-        "vscjava.vscode-java-debug",
-        "SonarSource.sonarlint-vscode",
-        "ms-vscode.vscode-json"
-      ]
-    }
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "21",
-      "jdkDistro": "temurin",
-      "installMaven": true
+        "vscjava.vscode-java-debug", 
+        "vmware.vscode-spring-boot",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "java.configuration.detectJdksAtStart": false,
+        "java.jdt.ls.vmargs": "-Xmx1G -Xms100m"
+      }
     }
   }
 }
